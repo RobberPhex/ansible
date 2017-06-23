@@ -32,7 +32,7 @@ from ansible.playbook.taggable import Taggable
 class Block(Base, Become, Conditional, Taggable):
 
     # main block fields containing the task lists
-    _block = FieldAttribute(isa='list', default=[], inherit=False)
+    _block = FieldAttribute(isa='list', default=[], required=True ,inherit=False)
     _rescue = FieldAttribute(isa='list', default=[], inherit=False)
     _always = FieldAttribute(isa='list', default=[], inherit=False)
 
